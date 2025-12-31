@@ -1,0 +1,72 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #1a1a1a;
+    color: #f5f5f5;
+    font-family: 'Trebuchet MS', sans-serif;
+    margin: 0;
+    overflow: hidden;
+    transition: background-color 0.5s ease;
+}
+
+body:hover {
+    background-color: #333;
+}
+
+h1 {
+    font-size: 3em;
+    color: #00ff99;
+    margin-bottom: 20px;
+    transition: color 0.3s ease;
+}
+
+h1:hover {
+    color: #00cc99;
+}
+
+#timer, #score {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #ffcc00;
+    transition: color 0.3s ease;
+}
+
+#timer:hover, #score:hover {
+    color: #ff9900;
+}
+
+#alien {
+    width: 60px;
+    height: 60px;
+    background-image: url('alien.png'); /* Using your local image path */
+    background-size: cover;
+    position: absolute;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #00ff99, 0 0 20px #00ff99;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#alien:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 20px #00ff99, 0 0 40px #00ff99;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+#alien {
+    animation: pulse 1s infinite;
+}
